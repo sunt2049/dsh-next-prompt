@@ -1,4 +1,4 @@
-# 猜下一句（dsh-next-prompt）
+# 猜下一句（@sunt2049/dsh-next-prompt）
 
 回合结束后，猜一句「你接下来会说的话」：
 
@@ -36,7 +36,7 @@ lib/desktop/client.js 浏览器半：胶囊 + 设置页（React，经模块表 r
 
 ### 设置（插件详情页 · `plugins.detail.section`）
 
-入口：**插件 → 已装 → dsh-next-prompt → 详情**，页面最下面一节「猜下一句」。
+入口：**插件 → 已装 → @sunt2049/dsh-next-prompt → 详情**，页面最下面一节「猜下一句」。
 （和 `@sunt2049/dsh-mcp-manager`、`dsh-context` 一样，不占「设置」里的导航项——
 这个插件没有独立偏好入口，跟着插件本身走更好找。想同时放进 设置 里，注册 `settings.section` 即可。）
 
@@ -138,10 +138,11 @@ turn/end(completed) ──1.2s──▶ 拼状态块 ──▶ 旁路小请求(�
 ## 安装 / 改代码
 
 Web / 桌面端（在 DSH 里）：**插件** → **添加插件** → 选这个目录（等价于 `plugin_manager install_bundle`）。
+发布到 npm 后也可以按包名安装：`plugin_manager install_bundle` 的 target 填 `@sunt2049/dsh-next-prompt`（插件页里同样可以直接填这个包名）。
 改完 `lib/desktop/*` 需要让插件行重启一次（`plugin_manager set_plugin` 关再开，或重启 DSH）——
 只改 `settings.json` / `stats.json` 是热生效的（`~/.dsh/dsh-next-prompt/` 下）。
 
-手机端（dsh-go）：`dsh plugin --profile web add <目录>`，改完 `lib/` 后在 App「引擎」页重启引擎。
+手机端（dsh-go）：`dsh plugin --profile web add <目录>`（发布后可以直接写 `@sunt2049/dsh-next-prompt`），改完 `lib/` 后在 App「引擎」页重启引擎。
 
 跑测试：
 
@@ -178,7 +179,7 @@ node test/desktop.mjs     # Web 宿主半：22 项，全部路由 + 三态 + 同
 - 宿主路由可用：`GET /state`（带 `limitMs`）、`/settings`（模型目录就是这台机器的四张牌）都返回 200；
   同源写操作 200、跨站 `Origin` 403；
 - 数据落在 `~/.dsh/dsh-next-prompt/`，插件源码目录保持干净；
-- 客户端两个槽位真的注册进了页面（Slots inspect：registrant `dsh-next-prompt`，`next-prompt` 两处 active：
+- 客户端两个槽位真的注册进了页面（Slots inspect：registrant `dsh-next-prompt`（插件行 id），`next-prompt` 两处 active：
   `conversation.composer.dock` 的胶囊、`plugins.detail.section` 的设置节）。
 
 **作者本人在 GUI 里确认（2026-11-17）**：胶囊渲染、点胶囊填入、插件详情页里的设置一节都正常。

@@ -1,4 +1,4 @@
 # id: any unique id; name: must equal "name" in package.json.
 - insert:
     - id: dsh-next-prompt
-      name: dsh-next-prompt
+      name: '@sunt2049/dsh-next-prompt'

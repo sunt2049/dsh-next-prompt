@@ -1,7 +1,6 @@
 {
-  "name": "dsh-next-prompt",
+  "name": "@sunt2049/dsh-next-prompt",
   "version": "0.2.0",
-  "private": true,
   "type": "module",
   "description": "回合结束后猜一句你接下来会说的话：Web / 桌面端显示为输入框下方的胶囊，手机端（dsh-go）显示为输入框上方的胶囊。",
   "keywords": [
@@ -12,7 +11,16 @@
     "next-prompt",
     "suggestion"
   ],
+  "author": "sunt2049 <fxwsun@outlook.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunt2049/dsh-next-prompt.git"
+  },
+  "homepage": "https://github.com/sunt2049/dsh-next-prompt#readme",
+  "bugs": {
+    "url": "https://github.com/sunt2049/dsh-next-prompt/issues"
+  },
   "main": "lib/index.js",
   "icon": "./icon.svg",
   "exports": {
@@ -32,6 +40,10 @@
     "README.md",
     "PORTING.md"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
