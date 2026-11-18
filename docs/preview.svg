@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300" role="img" aria-label="A suggestion chip under the composer">
+  <!-- Composer card -->
+  <rect x="96" y="52" width="448" height="104" rx="18" fill="#8b93a7" fill-opacity="0.10" stroke="#8b93a7" stroke-opacity="0.45" stroke-width="1.5"/>
+  <!-- Draft text placeholders -->
+  <rect x="120" y="78" width="236" height="10" rx="5" fill="#8b93a7" fill-opacity="0.55"/>
+  <rect x="120" y="100" width="168" height="10" rx="5" fill="#8b93a7" fill-opacity="0.35"/>
+  <!-- Caret in the draft -->
+  <rect x="296" y="96" width="2.5" height="18" rx="1.25" fill="#4d6bfe"/>
+  <!-- Suggestion chip under the card -->
+  <rect x="228" y="176" width="196" height="34" rx="9" fill="#4d6bfe" fill-opacity="0.12" stroke="#4d6bfe" stroke-opacity="0.55" stroke-width="1.5"/>
+  <!-- Sparkle glyph in the chip -->
+  <path d="M252 185.5l1.7 5.2a2.5 2.5 0 0 0 1.6 1.6l5.2 1.7-5.2 1.7a2.5 2.5 0 0 0-1.6 1.6l-1.7 5.2-1.7-5.2a2.5 2.5 0 0 0-1.6-1.6l-5.2-1.7 5.2-1.7a2.5 2.5 0 0 0 1.6-1.6z" fill="#4d6bfe"/>
+  <!-- Chip label placeholder -->
+  <rect x="268" y="188" width="112" height="10" rx="5" fill="#4d6bfe" fill-opacity="0.65"/>
+  <!-- Dismiss cross -->
+  <path d="M403 189l7 7M410 189l-7 7" fill="none" stroke="#8b93a7" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Arrow showing the chip fills the draft -->
+  <path d="M326 168v-8" fill="none" stroke="#4d6bfe" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M321 163l5-6 5 6" fill="none" stroke="#4d6bfe" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Turn-ended cue: a small sparkle above the card -->
+  <path d="M520 46l1.4 4.3a2 2 0 0 0 1.3 1.3l4.3 1.4-4.3 1.4a2 2 0 0 0-1.3 1.3l-1.4 4.3-1.4-4.3a2 2 0 0 0-1.3-1.3l-4.3-1.4 4.3-1.4a2 2 0 0 0 1.3-1.3z" fill="#8b93a7" fill-opacity="0.55"/>
+  <path d="M112 214l1 3.1a1.6 1.6 0 0 0 1 1l3.1 1-3.1 1a1.6 1.6 0 0 0-1 1l-1 3.1-1-3.1a1.6 1.6 0 0 0-1-1l-3.1-1 3.1-1a1.6 1.6 0 0 0 1-1z" fill="#8b93a7" fill-opacity="0.35"/>
+</svg>

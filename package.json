@@ -1,0 +1,92 @@
+{
+  "name": "dsh-next-prompt",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "回合结束后猜一句你接下来会说的话：Web / 桌面端显示为输入框下方的胶囊，手机端（dsh-go）显示为输入框上方的胶囊。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "next-prompt",
+    "suggestion"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/desktop/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "docs",
+    "test",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "PORTING.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "dshGo": {
+    "v": 1,
+    "title": {
+      "zh": "猜下一句",
+      "en": "Next prompt"
+    },
+    "icon": "sparkle",
+    "contributes": {
+      "composer.strip": [
+        {
+          "id": "next",
+          "icon": "sparkle"
+        }
+      ],
+      "panels": [
+        {
+          "id": "settings",
+          "title": {
+            "zh": "猜下一句设置",
+            "en": "Next prompt"
+          },
+          "icon": "settings",
+          "placement": [
+            "session.tab",
+            "features"
+          ]
+        },
+        {
+          "id": "entry",
+          "title": {
+            "zh": "猜下一句",
+            "en": "Next prompt"
+          },
+          "icon": "sparkle",
+          "placement": [
+            "chat.panel"
+          ]
+        }
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  }
+}

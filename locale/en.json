@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Next prompt",
+    "detail": "docs/DETAIL.md",
+    "description": "After each turn a small model reads this turn's state (todos, the last tool error, the files written or edited, and the last two messages) and guesses the sentence you are most likely to type next, as one chip under the composer. Click the chip to fill it into the composer — it is never sent automatically — and use the ✕ to put it away. A new turn removes the old guess at once. Each turn costs at most one side model call (by default the session's own model at its lowest reasoning effort, 96 tokens, 15 s timeout), and only for the conversation you are still looking at. Settings live in the Next prompt section of this plugin's details page (Plugins → Installed → dsh-next-prompt → Details): the automatic switch, answer length, candidate count, model, plus the last call's context and the acceptance rate. With the automatic switch off, you can still click the chip to guess on demand."
+  }
+}
